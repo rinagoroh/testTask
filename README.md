@@ -12,4 +12,4 @@ Use numbers for menu.
             4 - Show count of lectors
             5 - Global search by tempalte
             6 - menu 
-            7 - exit  
+ 
