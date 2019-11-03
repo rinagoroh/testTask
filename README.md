@@ -11,5 +11,5 @@ Use numbers for menu.
             3 - Show the average salary of departament
             4 - Show count of lectors
             5 - Global search by tempalte
-            6 - menu 
+        
  
