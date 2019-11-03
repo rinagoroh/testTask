@@ -1,4 +1,4 @@
-package kate.service;
+package constants;
 
 public interface RequestSender {
     int FIND_HEAD = 1;

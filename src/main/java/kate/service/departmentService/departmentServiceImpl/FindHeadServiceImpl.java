@@ -1,7 +1,7 @@
 package kate.service.departmentService.departmentServiceImpl;
 
 import static constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
-import static kate.service.RequestSender.FIND_HEAD;
+import static constants.RequestSender.FIND_HEAD;
 
 import constants.Constants;
 import java.util.Scanner;

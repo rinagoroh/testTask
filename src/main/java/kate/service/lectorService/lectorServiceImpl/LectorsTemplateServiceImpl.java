@@ -1,7 +1,7 @@
 package kate.service.lectorService.lectorServiceImpl;
 
 import static constants.Constants.GLOBAL_SEARCH_BY;
-import static kate.service.RequestSender.GLOBAL_SEARCH;
+import static constants.RequestSender.GLOBAL_SEARCH;
 
 import java.util.List;
 import java.util.Scanner;
