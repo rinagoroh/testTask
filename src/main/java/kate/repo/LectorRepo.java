@@ -10,6 +10,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LectorRepo extends JpaRepository<Lector, Long> {
 
-    @Query(value = "select l from Lector l where l.name like %:regex%")
-    List<Lector> findAllByRegex(@Param("regex") String regex);
+    @Query(value = "select l from Lector l where l.name like %:template%")
+    List<Lector> globalSearch(@Param("template") String template);
+
+    @Query(value = "select l from Lector l join Department d on d.lector.id = l.id where d.name = :name")
+    List<Lector> getAllByDepartmentName(@Param("name") String name);
 }
