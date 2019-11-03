@@ -27,7 +27,6 @@ public class LectorsTemplateServiceImpl implements LectorsByTemplateService, Tas
     public void execute() {
         System.out.println(GLOBAL_SEARCH_BY);
         String template = SC.nextLine();
-        System.out.println(template);
         List<Lector> lectors = globalSearch(template);
         lectors.forEach(l -> System.out.println(l.getName()));
     }
