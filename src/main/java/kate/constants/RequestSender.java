@@ -1,4 +1,4 @@
-package constants;
+package kate.constants;
 
 public class RequestSender {
     public static final int FIND_HEAD = 1;

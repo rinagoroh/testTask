@@ -1,4 +1,4 @@
-package constants;
+package kate.constants;
 
 public class Constants {
     public static final String ENTER_NAME_OF_DEPARTMENT_NAME = "Enter name of department (Economy, Theatre, History, Math): ";

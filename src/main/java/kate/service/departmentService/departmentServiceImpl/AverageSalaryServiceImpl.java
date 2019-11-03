@@ -1,7 +1,7 @@
 package kate.service.departmentService.departmentServiceImpl;
 
-import static constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
-import static constants.RequestSender.AVG_SALARY;
+import static kate.constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
+import static kate.constants.RequestSender.AVG_SALARY;
 
 import java.util.Scanner;
 import kate.TaskExecutor;

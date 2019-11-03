@@ -1,9 +1,9 @@
 package kate.service.departmentService.departmentServiceImpl;
 
-import static constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
-import static constants.RequestSender.FIND_HEAD;
+import static kate.constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
+import static kate.constants.RequestSender.FIND_HEAD;
 
-import constants.Constants;
+import kate.constants.Constants;
 import java.util.Scanner;
 import kate.TaskExecutor;
 import kate.entity.Lector;

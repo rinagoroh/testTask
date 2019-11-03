@@ -1,7 +1,7 @@
 package kate.service.lectorService.lectorServiceImpl;
 
-import static constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
-import static constants.RequestSender.EMPLOYEE_STATISTIC;
+import static kate.constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
+import static kate.constants.RequestSender.EMPLOYEE_STATISTIC;
 
 import java.util.List;
 import java.util.Scanner;
