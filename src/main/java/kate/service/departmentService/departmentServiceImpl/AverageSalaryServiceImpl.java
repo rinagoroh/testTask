@@ -1,5 +1,6 @@
 package kate.service.departmentService.departmentServiceImpl;
 
+import static constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
 import static kate.service.RequestSender.AVG_SALARY;
 
 import java.util.Scanner;
@@ -17,18 +18,18 @@ public class AverageSalaryServiceImpl implements AverageSalaryService, TaskExecu
 
     @Override
     public void execute() {
-        System.out.println("Enter name of department (Economy, Theatre, History, Math) : ");
+        System.out.println(ENTER_NAME_OF_DEPARTMENT_NAME);
         String name = SC.nextLine();
         System.out.println("The average salary of " + name + " is " + avgSalary(name));
     }
 
     @Override
-    public int getNumberOfTask() {
-        return AVG_SALARY;
+    public double avgSalary(String name) {
+        return repo.avgSalary(name);
     }
 
     @Override
-    public double avgSalary(String name) {
-        return repo.avgSalary(name);
+    public int getNumberOfTask() {
+        return AVG_SALARY;
     }
 }

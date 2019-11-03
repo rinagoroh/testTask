@@ -1,5 +1,6 @@
 package kate.service.departmentService.departmentServiceImpl;
 
+import static constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
 import static kate.service.RequestSender.COUNT_OF_LECTORS;
 
 import java.util.Scanner;
@@ -17,18 +18,18 @@ public class CountOfEmployeeServiceImpl implements CountOfEmployeeService, TaskE
 
     @Override
     public void execute() {
-        System.out.println("Enter name of department (Economy, Theatre, History, Math) : ");
+        System.out.println(ENTER_NAME_OF_DEPARTMENT_NAME);
         String name = SC.nextLine();
         System.out.println(countOfEmployee(name) + " employee(s).");
     }
 
     @Override
-    public int getNumberOfTask() {
-        return COUNT_OF_LECTORS;
+    public int countOfEmployee(String name) {
+        return repo.countOfEmployee(name);
     }
 
     @Override
-    public int countOfEmployee(String name) {
-        return repo.countOfEmployee(name);
+    public int getNumberOfTask() {
+        return COUNT_OF_LECTORS;
     }
 }

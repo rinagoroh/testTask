@@ -1,5 +1,6 @@
 package kate.service.lectorService.lectorServiceImpl;
 
+import static constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
 import static kate.service.RequestSender.EMPLOYEE_STATISTIC;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class LectorsStatisticServiceImpl implements LectorsStatisticService, Tas
 
     @Override
     public void execute() {
-        System.out.println("Enter name of department (Economy, Theatre, History, Math) : ");
+        System.out.println(ENTER_NAME_OF_DEPARTMENT_NAME);
         String name = SC.nextLine();
         int countAssistants = 0;
         int countAssociateProfessors = 0;
@@ -35,8 +36,7 @@ public class LectorsStatisticServiceImpl implements LectorsStatisticService, Tas
             } else if (lector.getDegree().equals(Degree.PROFESSOR)) {
                 countProfessors++;
             }
-        }
-        ;
+        };
 
         System.out.println("Assistans - " + countAssistants);
         System.out.println("Associate professors - " + countAssociateProfessors);

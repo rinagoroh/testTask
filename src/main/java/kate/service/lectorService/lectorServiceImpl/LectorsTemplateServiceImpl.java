@@ -1,5 +1,6 @@
 package kate.service.lectorService.lectorServiceImpl;
 
+import static constants.Constants.GLOBAL_SEARCH_BY;
 import static kate.service.RequestSender.GLOBAL_SEARCH;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class LectorsTemplateServiceImpl implements LectorsByTemplateService, Tas
 
     @Override
     public void execute() {
-        System.out.println("Global search by: ");
+        System.out.println(GLOBAL_SEARCH_BY);
         String template = SC.nextLine();
         System.out.println(template);
         List<Lector> lectors = globalSearch(template);
