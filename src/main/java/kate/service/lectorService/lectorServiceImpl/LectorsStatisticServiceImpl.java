@@ -1,7 +1,6 @@
 package kate.service.lectorService.lectorServiceImpl;
 
 import static kate.service.RequestSender.EMPLOYEE_STATISTIC;
-import static kate.service.RequestSender.GLOBAL_SEARCH;
 
 import java.util.List;
 import java.util.Scanner;
@@ -9,7 +8,6 @@ import kate.TaskExecutor;
 import kate.entity.Lector;
 import kate.entity.enums.Degree;
 import kate.repo.LectorRepo;
-import kate.service.lectorService.LectorsByTemplateService;
 import kate.service.lectorService.LectorsStatisticService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -29,7 +27,7 @@ public class LectorsStatisticServiceImpl implements LectorsStatisticService, Tas
         int countProfessors = 0;
 
         List<Lector> lectors = getDepartmentStatistic(name);
-        for (Lector lector: lectors) {
+        for (Lector lector : lectors) {
             if (lector.getDegree().equals(Degree.ASSISTANT)) {
                 countAssistants++;
             } else if (lector.getDegree().equals(Degree.ASSOCIATE_PROFESSOR)) {
@@ -37,7 +35,8 @@ public class LectorsStatisticServiceImpl implements LectorsStatisticService, Tas
             } else if (lector.getDegree().equals(Degree.PROFESSOR)) {
                 countProfessors++;
             }
-        };
+        }
+        ;
 
         System.out.println("Assistans - " + countAssistants);
         System.out.println("Associate professors - " + countAssociateProfessors);

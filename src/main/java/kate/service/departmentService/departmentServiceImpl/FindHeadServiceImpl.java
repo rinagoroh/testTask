@@ -18,7 +18,7 @@ public class FindHeadServiceImpl implements FindHeadService, TaskExecutor {
 
     @Override
     public Lector findHead(String name) {
-        return repo.findByName(name).orElseThrow(() -> new RuntimeException("Can't find by name.")).getHead();
+        return repo.findByName(name).orElseThrow(() -> new RuntimeException("Can not find.")).getHead();
     }
 
     @Override

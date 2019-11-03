@@ -33,7 +33,6 @@ public class Main {
             "3 - Show the average salary of department \n" +
             "4 - Show count of lectors \n" +
             "5 - Global search by template \n" +
-            "6 - menu \n" +
             "Just pick number from the list: \n");
     }
 
