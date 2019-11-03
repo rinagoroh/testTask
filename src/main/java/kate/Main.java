@@ -60,6 +60,7 @@ public class Main {
                 System.out.println("You have to input number between 1 and 5");
                 continue;
             }
+
             taskExecutor.execute();
         }
     }
