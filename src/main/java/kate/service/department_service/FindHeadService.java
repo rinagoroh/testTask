@@ -1,4 +1,4 @@
-package kate.service.departmentService;
+package kate.service.department_service;
 
 import kate.entity.Department;
 

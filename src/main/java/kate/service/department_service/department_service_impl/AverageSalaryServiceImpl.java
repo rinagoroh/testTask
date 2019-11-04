@@ -1,18 +1,18 @@
-package kate.service.departmentService.departmentServiceImpl;
+package kate.service.department_service.department_service_impl;
 
 import static kate.constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
-import static kate.constants.RequestSender.COUNT_OF_LECTORS;
+import static kate.constants.RequestSender.AVG_SALARY;
 
 import java.util.Scanner;
 import kate.TaskExecutor;
 import kate.repo.DepartmentRepo;
-import kate.service.departmentService.CountOfEmployeeService;
+import kate.service.department_service.AverageSalaryService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class CountOfEmployeeServiceImpl implements CountOfEmployeeService, TaskExecutor {
+public class AverageSalaryServiceImpl implements AverageSalaryService, TaskExecutor {
     private static final Scanner SC = new Scanner(System.in);
     private DepartmentRepo repo;
 
@@ -20,16 +20,16 @@ public class CountOfEmployeeServiceImpl implements CountOfEmployeeService, TaskE
     public void execute() {
         System.out.println(ENTER_NAME_OF_DEPARTMENT_NAME);
         String name = SC.nextLine();
-        System.out.println(countOfEmployee(name) + " employee(s).");
+        System.out.println("The average salary of " + name + " is " + avgSalary(name));
     }
 
     @Override
-    public int countOfEmployee(String name) {
-        return repo.countOfEmployee(name);
+    public double avgSalary(String name) {
+        return repo.avgSalary(name);
     }
 
     @Override
     public int getNumberOfTask() {
-        return COUNT_OF_LECTORS;
+        return AVG_SALARY;
     }
 }

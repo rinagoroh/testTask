@@ -1,4 +1,4 @@
-package kate.service.departmentService.departmentServiceImpl;
+package kate.service.department_service.department_service_impl;
 
 import static kate.constants.Constants.CAN_NOT_FOUND_HEAD_OF_DEPARTMENT_BY_NAME;
 import static kate.constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 import kate.TaskExecutor;
 import kate.entity.Department;
 import kate.repo.DepartmentRepo;
-import kate.service.departmentService.FindHeadService;
+import kate.service.department_service.FindHeadService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

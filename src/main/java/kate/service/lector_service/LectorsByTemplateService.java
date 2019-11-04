@@ -1,4 +1,4 @@
-package kate.service.lectorService;
+package kate.service.lector_service;
 
 import java.util.List;
 import kate.entity.Lector;
