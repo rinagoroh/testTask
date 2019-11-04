@@ -1,12 +1,12 @@
 package kate.service.departmentService.departmentServiceImpl;
 
+import static kate.constants.Constants.CAN_NOT_FOUND_HEAD_OF_DEPARTMENT_BY_NAME;
 import static kate.constants.Constants.ENTER_NAME_OF_DEPARTMENT_NAME;
 import static kate.constants.RequestSender.FIND_HEAD;
 
-import kate.constants.Constants;
 import java.util.Scanner;
 import kate.TaskExecutor;
-import kate.entity.Lector;
+import kate.entity.Department;
 import kate.repo.DepartmentRepo;
 import kate.service.departmentService.FindHeadService;
 import lombok.AllArgsConstructor;
@@ -19,17 +19,19 @@ public class FindHeadServiceImpl implements FindHeadService, TaskExecutor {
     private DepartmentRepo repo;
 
     @Override
-    public Lector findHead(String name) {
-        return repo.findByName(name)
-            .orElseThrow(() -> new RuntimeException(Constants.CAN_NOT_FOUND_BY_NAME + name))
-            .getHead();
+    public Department findByName(String name) {
+        return repo.findByName(name);
     }
 
     @Override
     public void execute() {
         System.out.println(ENTER_NAME_OF_DEPARTMENT_NAME);
         String name = SC.nextLine();
-        System.out.println("Head of department - " + findHead(name).getName());
+        try {
+            System.out.println("Head of department - " + findByName(name).getHead().getName());
+        } catch (Exception e) {
+            System.out.println(CAN_NOT_FOUND_HEAD_OF_DEPARTMENT_BY_NAME);
+        }
     }
 
     @Override

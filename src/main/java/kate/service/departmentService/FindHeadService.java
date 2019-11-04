@@ -1,7 +1,7 @@
 package kate.service.departmentService;
 
-import kate.entity.Lector;
+import kate.entity.Department;
 
 public interface FindHeadService {
-    Lector findHead(String name);
+    Department findByName(String name);
 }

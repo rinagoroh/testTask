@@ -1,6 +1,7 @@
 package kate;
 
 import static java.util.stream.Collectors.toMap;
+import static kate.constants.Constants.MENU;
 
 import java.util.List;
 import java.util.Map;
@@ -26,23 +27,13 @@ public class Main {
         context.getBean(Main.class).startApplication();
     }
 
-    private static void printMenu() {
-        System.out.println("----Menu---- \n" +
-            "1 - Who is head of department \n" +
-            "2 - Show department statistic \n" +
-            "3 - Show the average salary of department \n" +
-            "4 - Show count of lectors \n" +
-            "5 - Global search by template \n" +
-            "Just pick number from the list: \n");
-    }
-
     public void startApplication() {
         TaskExecutor taskExecutor;
         int select;
         String input;
 
         while (true) {
-            printMenu();
+            System.out.println(MENU);
 
             input = SC.nextLine();
 
