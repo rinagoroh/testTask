@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Main {
     private static final Scanner SC = new Scanner(System.in);
-    private static Map<Integer, TaskExecutor> map;
+    private Map<Integer, TaskExecutor> map;
 
     public Main(List<TaskExecutor> taskExecutors) {
         map = taskExecutors.stream().collect(toMap(TaskExecutor::getNumberOfTask, Function.identity()));
