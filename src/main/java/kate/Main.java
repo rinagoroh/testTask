@@ -1,7 +1,9 @@
 package kate;
 
 import static java.util.stream.Collectors.toMap;
+import static kate.constants.Constants.INTEGER_INPUT;
 import static kate.constants.Constants.MENU;
+import static kate.constants.Constants.MENU_NUMBER_RANGE;
 
 import java.util.List;
 import java.util.Map;
@@ -41,14 +43,14 @@ public class Main {
             try {
                 select = Integer.valueOf(input);
             } catch (Exception c) {
-                System.out.println("You have to input integer.");
+                System.out.println(INTEGER_INPUT);
                 continue;
             }
 
             taskExecutor = map.get(select);
 
             if (taskExecutor == null) {
-                System.out.println("You have to input number between 1 and 5");
+                System.out.println(MENU_NUMBER_RANGE);
                 continue;
             }
 

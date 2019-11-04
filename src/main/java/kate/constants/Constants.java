@@ -3,6 +3,8 @@ package kate.constants;
 public class Constants {
     public static final String ENTER_NAME_OF_DEPARTMENT_NAME = "Enter name of department (Economy, Theatre, History, Math): ";
     public static final String GLOBAL_SEARCH_BY = "Global search by: ";
+    public static final String INTEGER_INPUT = "You have to input integer.";
+    public static final String MENU_NUMBER_RANGE = "You have to input number between 1 and 5.";
 
     //Error messages
     public static final String CAN_NOT_FOUND_HEAD_OF_DEPARTMENT_BY_NAME = "Can not find head of department by name.";
